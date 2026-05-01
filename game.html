@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bug Hunter: Loading Rescue</title>
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body>
+    <div class="game-root">
+      <div class="particles" id="particles"></div>
+
+      <header class="hud">
+        <h1>🐞 Bug Hunter: Loading Rescue</h1>
+        <div class="stats">
+          <div class="stat">Score: <span id="score">0</span></div>
+          <div class="stat">Combo: <span id="combo">0</span></div>
+          <div class="stat">Timer: <span id="timer">0.0</span>s</div>
+          <div class="stat">High: <span id="highScore">0</span></div>
+        </div>
+        <div class="health-wrap">
+          <label for="healthBar">System Health</label>
+          <progress id="healthBar" max="100" value="100"></progress>
+        </div>
+      </header>
+
+      <section class="playfield" id="playfield"></section>
+
+      <section class="quiz hidden" id="quizModal">
+        <h2 id="bugTitle">Bug</h2>
+        <p id="bugPrompt"></p>
+        <div id="options" class="options"></div>
+      </section>
+
+      <section class="status-panel" id="statusPanel">
+        <div class="loading-spinner"></div>
+        <p>Website loading... Hunt bugs while you wait.</p>
+      </section>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

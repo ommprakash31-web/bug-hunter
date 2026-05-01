@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Bug Hunter: Loading Rescue",
+  "description": "Play a cyber bug-fixing mini-game while slow websites load.",
+  "version": "1.0.0",
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Bug Hunter: Loading Rescue"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["game.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["game.html", "game.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

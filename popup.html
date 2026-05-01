@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bug Hunter Settings</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <h1>Bug Hunter ⚡</h1>
+
+      <label class="row">
+        <span>Enable game</span>
+        <input id="enabled" type="checkbox" />
+      </label>
+
+      <label class="row">
+        <span>Loading delay</span>
+        <select id="delay">
+          <option value="2">2 sec</option>
+          <option value="5">5 sec</option>
+          <option value="10">10 sec</option>
+        </select>
+      </label>
+
+      <label class="row">
+        <span>Difficulty</span>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </label>
+
+      <label class="row">
+        <span>Mute sound</span>
+        <input id="mute" type="checkbox" />
+      </label>
+
+      <section class="score-box">
+        <p>High score: <strong id="highScore">0</strong></p>
+        <button id="resetScore" type="button">Reset High Score</button>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
